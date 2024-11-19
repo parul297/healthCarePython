@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: white; /* Set default text color to white */
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://imageio.forbes.com/specials-images/imageserve/651bbeb1c78cc403f92a6abd/The-10-Biggest-Trends-Revolutionizing-Healthcare-In-2024/0x0.jpg?crop=2500,1405,x0,y0,safe&height=399&width=711&fit=bounds");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Background blur */
+    z-index: -1;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 5rem auto;
+    backdrop-filter: blur(10px); /* Additional blur for the content box */
+    color: white; /* Ensure all text in the container is white */
+  }
+  
+  .app-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white; /* White text for the title */
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .input-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); /* Slightly transparent background */
+    color: white; /* White text inside the input box */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .input-field input:focus {
+    outline: none;
+    border-color: #1976d2; /* Blue border on focus */
+    background-color: rgba(255, 255, 255, 1); /* Full white background on focus */
+    color: #000; /* Black text when focused */
+  }
+  
+  .upload-button {
+    background-color: #1976d2;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    border-radius: 8px;
+    text-transform: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #1565c0;
+  }
+  
+  .submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    text-transform: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .MuiAlert-root {
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  .MuiAlert-standardSuccess {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .MuiAlert-standardError {
+    background-color: #f44336;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .file-info {
+    font-size: 1rem;
+    color: white; /* White text for file info */
+    text-align: center;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding: 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .app-container {
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  
+    .app-title {
+      font-size: 1.5rem;
+    }
+  
+    .upload-button,
+    .submit-button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }

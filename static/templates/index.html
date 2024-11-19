@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="app-title">Healthcare Dashboard</h1>
+
+    <form id="healthcare-form" enctype="multipart/form-data">
+      <div class="input-field">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+
+      <div class="input-field">
+        <label for="age">Age:</label>
+        <select name="age" id="age" required>
+          <option value="" disabled selected>Select Age</option>
+          {% for i in range(1, 101) %}
+          <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button class="upload-button" type="button">
+        <label for="file">Upload File</label>
+        <input type="file" id="file" name="file" hidden />
+      </button>
+
+      <button class="submit-button" type="submit">Submit</button>
+    </form>
+
+    <div id="success-message" style="display: none;" class="file-info">
+      Form submitted successfully!
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
